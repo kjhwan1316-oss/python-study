@@ -37,3 +37,79 @@ print()
 print(name2)
 
 print("python\n"*5) #반복문
+
+won="63,120,450"
+won2=won.replace(",", "")
+print(won2) 
+
+won3=345908809
+won4=format(won3, ",")
+print(won4)
+
+#문자열 대소문자, 길이
+p="Python is Amazing"
+print(p.lower()) #모두 소문자
+print(p.upper()) #모두 대문자
+print(p.capitalize()) #첫 글자만 대문자
+print(p[0].isupper()) #첫 글자가 대문자인지 확인
+print(len(p)) #문자열 길이
+print(p.count("i")) #문자열에서 특정 문자의 개수
+
+#위치
+index=p.index("i") #7
+print(index)
+index=p.index("i", index+1) #14
+print(index) 
+
+# 문자열 연결
+words = ["python","is","easy"]
+result = " ".join(words) #" " -> 리스트의 요소들을 공백으로 연결
+print(result)
+
+#제거
+text = "     Hello     Python****"
+print(text.strip()) #문자열 양쪽 공백 제거
+print(text.rstrip()) #문자열 오른쪽 공백 제거 lstrip(): 왼쪽 공백 제거
+
+#자리 수만큼 0으로 채우기
+num="5"
+result=num.zfill(3) #문자열의 길이가 3이 되도록 왼쪽에 0을 채움
+print(result) 
+
+#format
+age =19
+print("나는 %d살입니다"%age)
+print("나는 {}살입니다".format(age)) #{} -> format()에서 전달된 값을 순서대로 넣어줌
+
+like = "노래부르기"
+print("나는 %d살이고, %s을 좋아합니다"%(age, like))
+print("나는 {0}살이고, {1}을 좋아합니다".format(age, like)) #{0} -> format()에서 전달된 첫 번째 값, {1} -> format()에서 전달된 두 번째 값
+
+print("나의 주소는 {addr}이며, 나의 키는 {height}cm입니다".format(addr="김포시", height=160)) # 이름으로 전달값 참조: addr, height
+
+#이스케이프(탈출) 문자
+print("\n배우는 과목은 \"파이썬\" 입니다")
+#r: 커서를 맨 앞으로 이동
+print("red   apple\r pine") #\r: 맨 앞으로 이동
+print("i like you!\b!!") #\b: 한 글자 삭제
+print("red\t apple") #\t: 탭
+3.23
+
+p="Python is Amazing"
+print(p.find("A")) # 위치 반환
+print(p.rfind("A")) # 오른쪽에서 위치 반환, 없으면 -1
+print(p.index("a")) # 위치 반환, 없으면 오류
+print(p.rindex("a")) # 오른쪽에서 위치 반환, 없으면 오류
+
+print(p.find("java")) # 없으면 -1
+
+# 문자 입력 예: information-technology
+# 정수 입력 예: 12
+arr_Str=input("input string: ").split("-") # '-'로 분리
+#arr_Str: ['information', 'technology']
+arr_Len=int(input("input Number: ")) # 정수 변환 : 12
+arr_Val=list(range(0, arr_Len, 2)) # 짝수 리스트 생성 -> 0, 2, 4, 6, 8, 10
+arr_Val.remove(4) # 4 제거 -> 0, 2, 6, 8, 10
+print(arr_Str[1].find('i')+arr_Val[2]) 
+# 'technology'에서 'i' 찾음 (없음, -1) + arr_Val[2] (6) = 5
+
