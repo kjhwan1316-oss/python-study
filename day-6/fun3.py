@@ -1,5 +1,5 @@
 def dis_price(a, b):
-    return a - (a/b)
+    return a - (a * b // 100)
 
 
 
@@ -9,4 +9,4 @@ print(price_a) #9000
 
 #b상품 가격: 50000원, 할인율: 20%
 price_b = dis_price(50000,20)
-print(price_b) #40000
+print(price_b) #40000 
